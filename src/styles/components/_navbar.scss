@@ -1,0 +1,119 @@
+@import '../variables';
+
+.navbar {	
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-direction: column;	
+
+	@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
+		align-items: center;
+		background: rgba(255, 255, 255, 0.04);
+		backdrop-filter: blur(2rem);
+		flex-direction: row;
+		gap: 2.5rem;
+		padding-inline: 3rem;
+	}
+
+	@media (min-width: $bp-desktop) {
+		align-items: center;
+		flex-direction: row;
+		gap: 3rem;
+		padding-right: 2rem;
+	}
+
+	&::after {
+		@media (min-width: $bp-desktop) {
+			content: "";
+			background: rgba(255, 255, 255, 0.04);
+			backdrop-filter: blur(2rem);
+			display: block;
+			position: absolute;
+			right: 0;
+			width: 60%;
+			height: 100%;
+			z-index: -1;
+		}
+	}
+
+	&__list {
+		display: contents;
+	}
+
+	&__item {
+		display: contents;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		color: hsl(var(--clr-white));
+		font: var(--nav-text);
+		font-family: var(--ff-sans-cond);
+		font-size: var(--fs-300);
+		letter-spacing: 2.7px;
+		padding-block: 1rem;		
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;		
+
+		@media (min-width: $bp-tablet) {
+			padding-block: 2.5rem;
+		}
+
+		&::after {
+			@media (min-width: $bp-tablet) {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: hsl(var(--clr-white) / 0.5);
+				width: 100%;
+				height: 3px;
+				transform: scaleX(0);
+				transition: transform 0.3s ease-in-out;		
+			}
+		}
+
+		&:hover {
+			&::after {
+				transform: scaleX(1);
+			}
+		}
+
+		&--active {
+			&::after {
+				background-color: hsl(var(--clr-white));
+				transform: scaleX(1);
+			}
+		}
+	}
+
+	&__number {		
+		@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
+			display: none;
+		}
+	}
+
+	&__menu {
+		@media (max-width: $bp-tablet - 1) {
+			background-color: hsl(var(--clr-white) / 0.04);
+			backdrop-filter: blur(5rem);
+			position: fixed;
+			inset: 0 0 0 auto;
+			padding: 7.375rem 6rem 1.5rem 2rem;			
+			height: 100%;
+			opacity: 0;
+			transform: translateX(100%);
+			transition: all .3s ease-in-out;
+			z-index: 11;
+
+			&--opened {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+}

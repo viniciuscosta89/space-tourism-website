@@ -1,0 +1,46 @@
+@import '../variables';
+
+.header {	
+	position: sticky;
+	top: 0;
+	margin-block-start: 1.5rem;
+	z-index: 10;
+
+	@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
+		margin-block-start: 0;		
+	}
+
+	@media (min-width: $bp-desktop) {
+		margin-block-start: 2.5rem;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: var(--container-width);
+		margin-inline: auto;
+		padding-inline: 1.5rem;			
+
+		@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
+			padding-inline: 2.5rem 0;
+		}
+		
+		@media (min-width: $bp-desktop) {
+			padding-inline: 0;			
+		}
+	}
+
+	&__divider {
+		display: none;	
+
+		@media (min-width: $bp-desktop) {
+			display: block;
+			background-color: hsl(var(--clr-white) / 0.25);
+			margin-left: 4rem;
+			margin-right: 5rem;
+			width: 100%;
+			height: 1px;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+---
+// You can import components from any supported Framework here!
+import HomeLayout from '../layouts/HomeLayout.astro'
+import { Button } from '../components/Button.tsx'
+
+const title = "Space Tourism Website"
+
+const goToDestination = () => {
+  if (typeof window !== "undefined") {
+    window.location.href = `/destination`
+  }
+}
+---
+
+<HomeLayout title={title}>
+  <div class="home-columns">
+    <section class="home-column-1">
+      <span class="heading-5">So, you want to travel to</span>
+      <h1 class="heading-1">Space</h1>
+      <p class="body-text">
+        Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+      </p>  
+    </section>
+
+    <section class="home-column-2">
+      <Button client:visible onClick={goToDestination}>Explore</Button>
+    </section>
+  </div>
+</HomeLayout>
+
+<style lang="scss">
+  @import '../styles/variables.scss';
+
+  .home-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9.75rem;
+
+    @media (min-width: $bp-tablet) and (max-width: $bp-desktop) {
+      margin-top: 9.82vh;
+    }
+
+    @media (min-width: $bp-desktop) {
+      align-items: flex-end;
+      flex-direction: row;
+      margin-top: 22vh;
+    }
+  }
+
+  .home-column-1 {
+    max-width: 450px;
+    text-align: center;
+
+    @media (min-width: $bp-desktop) {
+      text-align: left;
+    }
+  }
+
+  h1 {    
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-tablet) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  span {
+    color: hsl(var(--clr-secondary));
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-tablet) {
+      margin-bottom: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,39 @@
+---
+  import star from '/assets/shared/star.svg';
+  import { NavBar } from './NavBar/NavBar';
+
+  const navItems = [
+    {
+      id: 'home',
+      label: 'Home',
+      path: '/'
+    },
+    {
+      id: 'destination',
+      label: 'Destination',
+      path: '/destination'
+    },
+    {
+      id: 'crew',
+      label: 'Crew',
+      path: '/crew'
+    },
+    {
+      id: 'technology',
+      label: 'Technology',
+      path: '/technology'
+    }
+  ]
+
+const { navId } = Astro.props;
+---
+
+<header class="header">
+  <div class="header__container">
+    <img src={star} class="header__logo" alt="Logo" />
+
+    <span class="header__divider"></span>
+
+    <NavBar items={navItems} navId={navId} client:load />
+  </div>
+</header>

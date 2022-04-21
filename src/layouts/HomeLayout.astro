@@ -1,0 +1,21 @@
+---
+  // You can import components from any supported Framework here!
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+
+const { title } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} />    
+  </head>
+  <body class="bg-home">
+    <Header navId="home" />
+    <main class="">
+      <div class="container grid">
+        <slot />            
+      </div>
+    </main>
+  </body>
+</html>

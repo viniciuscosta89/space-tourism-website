@@ -1,0 +1,33 @@
+.page-heading {
+	display: flex;
+	gap: 18px;
+	place-content: center;
+	font-family: var(--ff-sans-cond);
+	font-size: var(--fs-300);
+	letter-spacing: 4.725px;
+	line-height: normal;
+	margin-block: 1.5rem 3.75rem;
+
+	@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
+		font-size: 1.25rem;
+		margin-block: 2.5rem 3.75rem;
+		place-content: flex-start;
+	}
+
+	@media (min-width: $bp-desktop) {
+		font-size: var(--fs-500);
+		gap: 28px;		
+		place-content: flex-start;
+		margin-block: 4.75rem 4rem;
+	}
+	
+	&__number {
+		color: hsl(var(--clr-white) / 25%);
+	}
+
+	&__text {
+		color: hsl(var(--clr-white));
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+}

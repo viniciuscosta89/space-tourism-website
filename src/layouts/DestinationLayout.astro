@@ -1,0 +1,28 @@
+---
+  // You can import components from any supported Framework here!
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Tabs from '../components/Tabs'
+
+const { title, tabs } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} />    
+  </head>
+  <body class="bg-destination">
+    <Header navId="destination" />
+
+    <main>
+      <div class="container grid">
+        <h5 class="page-heading">
+          <span class="page-heading__number">01</span>
+          <span class="page-heading__text">Pick your destination</span>
+        </h5>					
+
+				<Tabs tabs={tabs} client:visible></Tabs>
+      </div>
+    </main>
+  </body>
+</html>
