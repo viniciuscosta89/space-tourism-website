@@ -50,7 +50,9 @@
 	padding: 0 1px 12px;
 	position: relative;
 	text-transform: uppercase;
-	transition: all 0.3s ease-in-out;	
+	transition: all 0.3s ease-in-out;
+	
+	$tab: &;
 
 	@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
 		font-size: var(--fs-300);
@@ -92,8 +94,11 @@
 		place-items: center;
 		opacity: 0;
 		position: absolute;		
+		top: 0;
 		visibility: hidden;
 		transition: opacity 0.5s ease-in-out;
+
+		$content: &;
 		
 		@media (min-width: $bp-desktop) {
 			column-gap: 160px;
@@ -107,6 +112,14 @@
 			opacity: 1;
 			position: relative;
 			visibility: visible;
+
+			#{$tab}__img {
+				animation: slide-right 0.5s ease-in-out;				
+			}
+
+			#{$tab}__text {
+				animation: slide-left 0.5s ease-in-out;
+			}
 		}
 	}
 
