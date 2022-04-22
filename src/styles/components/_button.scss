@@ -5,12 +5,23 @@
 	background-color: hsl(var(--clr-white));
 	border: none;
 	border-radius: 50%;
-	font: var(--heading-4);
+	font-family: var(--ff-serif);
+	font-size: 1.25rem;	
 	position: relative;
 	display: flex;
 	place-items: center;
-	padding-inline: 4.5rem;
+	padding-inline: 2rem;
 	text-transform: uppercase;
+
+	@media (min-width: $bp-tablet) and (max-width: $bp-desktop) {	
+		font-size: var(--fs-600);
+		padding-inline: 3.5rem;	
+	}
+
+	@media (min-width: $bp-desktop) {
+		font-size: var(--fs-600);
+		padding-inline: 4.5rem;
+	}
 
 	&::before {
 		content: "";
