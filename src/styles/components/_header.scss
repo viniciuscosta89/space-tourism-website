@@ -8,10 +8,12 @@
 
 	@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
 		margin-block-start: 0;		
+		top: 0;
 	}
 
 	@media (min-width: $bp-desktop) {
 		margin-block-start: 2.5rem;
+		top: 0;
 	}
 
 	&__container {
