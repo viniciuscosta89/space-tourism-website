@@ -1,0 +1,56 @@
+---
+  // You can import components from any supported Framework here!
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import CrewSlider from '../components/CrewSlider';
+
+const { title, slides } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} />    
+  </head>
+  <body class="bg bg-crew">
+    <Header navId="crew" />
+
+    <main>
+      <div class="container grid">
+        <h5 class="page-heading">
+          <span class="page-heading__number">02</span>
+          <span class="page-heading__text">Meet your crew</span>          
+        </h5>					
+
+        <CrewSlider slides={slides} client:load />
+      </div>
+    </main>
+  </body>
+</html>
+
+<style lang="scss">
+  @import '../styles/variables.scss';
+
+  .container {    
+    margin-block-end: 6.5rem;
+
+    @media (min-width: $bp-tablet) and (max-width: $bp-desktop) {      
+      margin-block: 2.5rem 0;
+    }
+
+    @media (min-width: $bp-desktop) {
+      margin-block: 4.75rem 0;
+    }
+  }
+
+  .page-heading {
+    margin-block-end: 2rem;
+
+    @media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {      
+      margin-block: 0 3.75rem;
+    }
+
+    @media (min-width: $bp-desktop) {      
+      margin-block: 0;
+    }
+  }
+</style>
