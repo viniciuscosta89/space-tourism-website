@@ -2,8 +2,7 @@
 
 .header {	
 	position: sticky;
-	top: 1.5rem;
-	margin-block-start: 1.5rem;
+	top: 1.5rem;	
 	z-index: 10;
 
 	@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
@@ -33,14 +32,22 @@
 		}
 	}
 
+	&__link {
+		display: block;
+
+		@media (min-width: $bp-desktop) {
+			position: absolute;
+			left: 3.5rem;
+		}
+	}
+
 	&__divider {
 		display: none;	
 
 		@media (min-width: $bp-desktop) {
 			display: block;
-			background-color: hsl(var(--clr-white) / 0.25);
-			margin-left: 4rem;
-			margin-right: 5rem;
+			background-color: hsl(var(--clr-white) / 0.25);			
+			margin-inline: 2rem 5rem;
 			width: 100%;
 			height: 1px;
 		}
