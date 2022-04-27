@@ -1,0 +1,13 @@
+---
+// You can import components from any supported Framework here!
+import TechnologyLayout from '../../layouts/TechnologyLayout.astro';
+import data from '../data.json';
+
+const { technology } = data;
+---
+
+<TechnologyLayout 
+	title="Technology"
+  slides={technology}
+>	
+</TechnologyLayout>
