@@ -114,11 +114,19 @@
 			visibility: visible;
 
 			#{$tab}__img {
-				animation: slide-right 0.5s ease-in-out;				
+				animation: slide-top 0.5s ease-in-out;				
+
+				@media (min-width: $bp-desktop) {
+					animation: slide-right 0.5s ease-in-out;
+				}
 			}
 
 			#{$tab}__text {
-				animation: slide-left 0.5s ease-in-out;
+				animation: slide-bottom 0.5s ease-in-out;
+
+				@media (min-width: $bp-desktop) {
+					animation: slide-left 0.5s ease-in-out;
+				}
 			}
 		}
 	}
