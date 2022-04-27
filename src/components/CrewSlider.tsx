@@ -5,6 +5,8 @@ export default ({ slides }) => {
 	return (
 		<Swiper
 			modules={[EffectFade, Pagination]}
+			effect="fade"
+			fadeEffect={{ crossFade: true }}
 			slidesPerView={1}
 			slideClass="crew-slide"
 			slideActiveClass="crew-slide--active"
@@ -22,9 +24,9 @@ export default ({ slides }) => {
 					<div className="crew-slide__pagination"></div>
 
 					<div className="crew-slide__text">
-						<h3 className="crew-slide__role">{slide.role}</h3>
-						<h2 className="crew-slide__name">{slide.name}</h2>
-						<p className="crew-slide__bio">{slide.bio}</p>
+						<h3 className="crew-slide__subtitle">{slide.role}</h3>
+						<h2 className="crew-slide__title">{slide.name}</h2>
+						<p className="crew-slide__description">{slide.bio}</p>
 					</div>
 				</SwiperSlide>
 			))}
