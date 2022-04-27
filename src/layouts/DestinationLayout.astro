@@ -26,3 +26,19 @@ const { title, tabs } = Astro.props
     </main>
   </body>
 </html>
+
+<style lang="scss">
+  @import '../styles/variables.scss';
+
+  .container {    
+    padding-block: 4rem 0;
+
+    @media (min-width: $bp-tablet) and (max-width: $bp-desktop) {      
+      padding-block: 2.5rem 0;
+    }
+
+    @media (min-width: $bp-desktop) {
+      padding-block: 4.75rem 0;
+    }
+  }
+</style>
