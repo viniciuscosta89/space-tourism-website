@@ -4,15 +4,13 @@
 
 .swiper {
 	width: 100%;
-	
-	@media (min-width: $bp-desktop) {
-		margin-block-start: -7%;
-	}
 }
 
 .crew-slide {
 	display: grid;
 	justify-items: center;
+	align-content: flex-start;
+	align-items: start;
 
 	$slide: &;
 
@@ -27,6 +25,8 @@
 		grid-template-columns: 1fr 1fr;	
 		grid-template-rows: auto 1fr;	
 		gap: 0 1.25rem;
+		align-items: initial;
+    align-content: initial;
 		justify-items: flex-start;
 	}
 
@@ -108,7 +108,7 @@
 		}
 	}
 
-	&__role {
+	&__subtitle {
 		color: hsl(var(--clr-white) / 50%);
 		font-family: var(--ff-serif);
 		font-size: var(--fs-300);
@@ -127,7 +127,7 @@
 		}
 	}
 
-	&__name {
+	&__title {
 		color: hsl(var(--clr-white));
 		font-family: var(--ff-serif);
 		font-size: 1.5rem;
@@ -147,7 +147,7 @@
 		}
 	}
 
-	&__bio {
+	&__description {
 		color: hsl(var(--clr-secondary));
 		font-family: var(--ff-sans-serif);
 		line-height: 1.67;
