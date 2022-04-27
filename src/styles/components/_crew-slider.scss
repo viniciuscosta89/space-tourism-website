@@ -35,6 +35,7 @@
 		margin-block-end: 2rem;
 		max-height: 222px;
     object-fit: contain;
+		opacity: 0;
 		width: 100%;
 
 		@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
@@ -94,6 +95,7 @@
 	}
 
 	&__text {
+		opacity: 0;
 		text-align: center;
 
 		@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
@@ -166,27 +168,27 @@
 
 	&--active {
 		#{$slide}__img {		
-			animation: slide-top 1s ease-in-out;		
+			animation: slide-top 1s ease-in-out forwards;		
 
 			@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
-				animation: slide-bottom 1s ease-in-out;	
+				animation: slide-bottom 1s ease-in-out forwards;	
 			}
 
 			@media (min-width: $bp-desktop) {				
-				animation: slide-left 1s ease-in-out;				
+				animation: slide-left 1s ease-in-out forwards;				
 			}
 
 		}
 
 		#{$slide}__text {
-			animation: slide-bottom 1s ease-in-out;		
+			animation: slide-bottom 1s ease-in-out forwards;		
 
 			@media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
-				animation: slide-top 1s ease-in-out;
+				animation: slide-top 1s ease-in-out forwards;
 			}
 
 			@media (min-width: $bp-desktop) {				
-				animation: slide-right 1s ease-in-out;
+				animation: slide-right 1s ease-in-out forwards;
 			}
 		}
 	}
