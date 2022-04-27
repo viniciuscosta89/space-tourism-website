@@ -4,12 +4,12 @@ import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Tabs from '../components/Tabs'
 
-const { title, tabs } = Astro.props
+const { description, title, tabs } = Astro.props
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={title} />    
+    <BaseHead title={title} description={description} />    
   </head>
   <body class="bg bg-destination">
     <Header navId="destination" />

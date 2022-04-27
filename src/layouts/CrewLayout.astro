@@ -4,12 +4,12 @@ import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import CrewSlider from '../components/CrewSlider';
 
-const { title, slides } = Astro.props
+const { description, title, slides } = Astro.props
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={title} />    
+    <BaseHead title={title} description={description} />    
   </head>
   <body class="bg bg-crew">
     <Header navId="crew" />
@@ -31,14 +31,14 @@ const { title, slides } = Astro.props
   @import '../styles/variables.scss';
 
   .container {    
-    margin-block-end: 6.5rem;
+    padding-block: 3rem 3.5rem;
 
     @media (min-width: $bp-tablet) and (max-width: $bp-desktop) {      
-      margin-block: 2.5rem 0;
+      padding-block: 2.5rem 0;
     }
 
     @media (min-width: $bp-desktop) {
-      margin-block: 4.75rem 0;
+      padding-block: 4.75rem 0;
     }
   }
 
