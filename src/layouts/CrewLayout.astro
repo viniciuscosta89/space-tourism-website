@@ -21,7 +21,7 @@ const { title, slides } = Astro.props
           <span class="page-heading__text">Meet your crew</span>          
         </h5>					
 
-        <CrewSlider slides={slides} client:load />
+        <CrewSlider slides={slides} client:visible />
       </div>
     </main>
   </body>
@@ -51,6 +51,12 @@ const { title, slides } = Astro.props
 
     @media (min-width: $bp-desktop) {      
       margin-block: 0;
+    }
+  }
+
+  .swiper {
+    @media (min-width: $bp-desktop) {
+      margin-block-start: -7%;
     }
   }
 </style>
