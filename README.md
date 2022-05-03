@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/space-tourism-multipage-website-hub-with-astro-and-react-SkmB9UDr5)
-- Live Site URL: [Add live site URL here](https://space-tourism-website-viniciuscosta89.vercel.app)
+- Solution URL: (<https://www.frontendmentor.io/solutions/space-tourism-multipage-website-hub-with-astro-and-react-SkmB9UDr5>)
+- Live Site URL: (<https://space-tourism-website-viniciuscosta89.vercel.app>)
 
 ## My process
 
