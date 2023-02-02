@@ -1,5 +1,6 @@
 import { Pagination, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Slide } from '../types/slide';
 
 export default ({ slides }) => {
 	return (
@@ -17,7 +18,7 @@ export default ({ slides }) => {
 				bulletActiveClass: 'crew-slide__bullet--active',
 			}}
 		>
-			{slides.map((slide, index) => (
+			{slides.map((slide: Slide, index: number) => (
 				<SwiperSlide className="crew-slide" key={index}>
 					<img className="crew-slide__img" src={slide.images.webp} alt={slide.name} />
 
