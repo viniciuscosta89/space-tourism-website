@@ -1,5 +1,6 @@
 import { Pagination, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Slide } from '../types/slide';
 
 export default ({ slides }) => {
 	return (
@@ -20,7 +21,7 @@ export default ({ slides }) => {
 				},
 			}}
 		>
-			{slides.map((slide, index) => (
+			{slides.map((slide: Slide, index: number) => (
 				<SwiperSlide className="technology-slide" key={index}>
 					<picture className="technology-slide__img">
 						<source srcSet={slide.images.portrait} type="image/jpg" media="(min-width: 75rem)" />
